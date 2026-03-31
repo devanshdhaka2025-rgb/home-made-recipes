@@ -1,0 +1,175 @@
+
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif; /* Typography */
+    background: linear-gradient(to bottom, #f5f7fa, #eef1f5); /* Background */
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #ff7043, #ff8a65);
+    color: white;
+    text-align: center;
+    padding: 20px; 
+    border-bottom: 3px solid #e55a2f;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    transition: all 0.3s ease; 
+}
+
+nav a:hover {
+    opacity: 0.8;
+    transform: translateY(-2px); 
+}
+
+.intro {
+    text-align: center;
+    padding: 35px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+
+.recipes {
+    display: flex;             
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 25px;
+}
+
+
+.card {
+    background: white;
+    width: 220px;
+    padding: 15px; 
+    border-radius: 14px;
+    text-align: center;
+    border: 1px solid #ddd; 
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+
+    transition: transform 0.4s ease;
+}
+
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+}
+
+.card:hover img {
+    transform: scale(1.06);
+}
+
+
+.card a {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 7px 14px;
+    background: #ff7043;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.card a:hover {
+    background: #e55a2f;
+    transform: translateY(-2px);
+}
+
+
+.recipe {
+    max-width: 720px;
+    margin: 40px auto; 
+    padding: 25px;     
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+
+    animation: fadeIn 0.6s ease;
+}
+
+
+.recipe img {
+    display: block;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 12px;
+}
+
+
+.recipe ul,
+.recipe ol {
+    margin-left: 20px;
+    margin-top: 12px;
+}
+
+
+footer {
+    background: #2f2f2f;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 600px) {
+    .recipes {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .intro {
+        padding: 25px 15px;
+    }
+
+    header {
+        font-size: 14px;
+    }
+}
